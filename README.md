@@ -42,17 +42,17 @@ docker run \
 
 ```
 version: "2"
-  services:
-    smtp:
-      image: industrieco/exim-relay
-      restart: always
-      ports:
-        - "25:8025"
-      hostname: my.host.name
-      environment:
-        - SMARTHOST=some.relayhost.name
-        - SMTP_USERNAME=someuser
-        - SMTP_PASSWORD=password
+services:
+  smtp:
+    image: industrieco/exim-relay
+    restart: always
+    ports:
+      - "25:8025"
+    hostname: my.host.name
+    environment:
+      - SMARTHOST=some.relayhost.name
+      - SMTP_USERNAME=someuser
+      - SMTP_PASSWORD=password
 ```
 
 ## Other Variables
